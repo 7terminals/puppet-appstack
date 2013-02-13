@@ -1,0 +1,3 @@
+# puppet-appstack #
+
+This is the puppet-appstack module. It provides...
