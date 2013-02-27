@@ -41,4 +41,11 @@ define appstack::setup ($user, $group) {
     group  => $group,
     mode   => '644',
   }
+
+  file { "/home/${user}/.ssh":
+    ensure => directory,
+    owner  => $user,
+    group  => $group,
+    mode   => '700',
+  }
 }
