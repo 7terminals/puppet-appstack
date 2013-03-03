@@ -1,17 +1,9 @@
 define appstack::setup ($user, $group) {
-  file { "/home/${user}/appstack":
+  file { "/home/${user}/apps":
     ensure => directory,
     owner  => $user,
     group  => $group,
     mode   => '644',
-  }
-
-  file { "/home/${user}/appstack/etc":
-    ensure  => directory,
-    owner   => $user,
-    group   => $group,
-    mode    => '644',
-    require => File["/home/${user}/appstack"],
   }
 
   file { "/home/${user}/hangar":
