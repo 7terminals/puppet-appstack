@@ -30,7 +30,7 @@ Setup
 
 * The user's home directory structure
 	
-*** Beginning with appstack
+### Beginning with appstack
 
 To setup the initial directory structure
 
@@ -47,16 +47,16 @@ The `appstack::setup` resource definition has three parameters which are mandato
 
 **Parameters within `appstack`**
 
-****`ensure`
+####`ensure`
 
 This parameter specifies whether the directory structure should be created or not.
 Valid arguments are "present" or "absent". Default is present
 
-****`user`
+####`user`
 
 This parameter is used to set the permissions for the directory tree.
 
-****`group`
+####`group`
 
 This parameter is used to set the permissions for the directory tree.
 
