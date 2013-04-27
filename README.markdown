@@ -14,11 +14,11 @@ Module Description
 The appstack module allows Puppet to setup a directory structure for hosting isolated applications.
 The following tree is created:
 
-* ~/apps   - Apps such as tomcat and ant
-* ~/hangar - Source code for deploymemt of code
-* ~/log    - Each application creates a directory in here and places its' logs in it
-* ~/www    - Webapp directory
-* ~/var    - PID files and spool files are placed here
+* ~/apps   - Applications such as tomcat and ant are intended to be deplpyed in this directory
+* ~/hangar - Directory to checkout and build code
+* ~/log    - Applications are expected to be configured to log in this directory
+* ~/www    - Exploded WAR to be deployed here
+* ~/var    - Applications are expected to be configured to put their PID and spool files here
 * ~/cron   - Each cron must create a directory here and run from inside it
 * ~/.ssh   - The .ssh directory for the user
 
