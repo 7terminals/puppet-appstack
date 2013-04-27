@@ -1,14 +1,7 @@
-# Define appstack::setup
-# Sets up a directory structure for hosting isolated applications
-# ~/apps - JDk, Tomcat, Ant etc
-# ~/hangar - source code
-# ~/log - each application created a folder in here and places its logs in it
-# ~/www - webapp directory
-# ~/var - pid files, spool files etc
-# ~/cron - each cron must create a directory here and run from inside it
-# ~/.ssh - .ssh directory for the user
-
-define appstack::setup ($user = undef, $group = undef, $ensure = 'present') {
+define appstack::setup (
+  $user   = undef,
+  $group  = undef,
+  $ensure = 'present') {
   # we support only Debian and RedHat
   case $::osfamily {
     Debian  : { $supported = true }
@@ -66,19 +59,19 @@ define appstack::setup ($user = undef, $group = undef, $ensure = 'present') {
   } else {
     # delete all modifications done
     file { ["/home/${user}/apps", "/home/${user}/hangar", "/home/${user}/log", "/home/${user}/www"]:
-      ensure => 'absent',
+      ensure  => 'absent',
       recurse => true,
       force   => true,
     }
 
     file { ["/home/${user}/var", "/home/${user}/var/run", "/home/${user}/var/spool"]:
-      ensure => 'absent',
+      ensure  => 'absent',
       recurse => true,
       force   => true,
     }
 
     file { ["/home/${user}/cron", "/home/${user}/.ssh"]:
-      ensure => 'absent',
+      ensure  => 'absent',
       recurse => true,
       force   => true,
     }

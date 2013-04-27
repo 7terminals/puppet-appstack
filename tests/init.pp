@@ -1,5 +1,5 @@
-appstack::setup { 'setup_home':
-  user   => 'jude',
-  group  => 'jude',
+appstack::setup { 'example.com':
+  user   => 'example.com',
+  group  => 'example.com',
   ensure => 'present'
 }
