@@ -50,7 +50,7 @@ The `appstack::setup` resource definition has three parameters which are mandato
 ####`ensure`
 
 This parameter specifies whether the directory structure should be created or not.
-Valid arguments are "present" or "absent". Default is present
+Valid arguments are 'present' or 'absent'. Default is present
 
 ####`user`
 
@@ -84,6 +84,6 @@ Bug Reports
 Release Notes
 --------------
 
-**0.1.0**
+**0.0.1**
 
 First initial release.
