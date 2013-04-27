@@ -1,22 +1,21 @@
 {
-  "name": "Francis-puppet-appstack",
-  "author": "Francis",
-  "description": "",
+  "name": "7terminals-appstack",
+  "author": "Francis Pereira",
+  "description": "The appstack module allows Puppet to setup a directory structure for hosting isolated applications.\nThe following tree is created:\n\n ~/apps   - Applications such as tomcat and ant are intended to be deplpyed in this directory\n ~/hangar - Directory to checkout and build code\n ~/log    - Applications are expected to be configured to log in this directory\n ~/www    - Exploded WAR to be deployed here\n ~/var    - Applications are expected to be configured to put their PID and spool files here\n ~/cron   - Each cron must create a directory here and run from inside it\n ~/.ssh   - The .ssh directory for the user\n",
   "license": "",
-  "project_page": "",
-  "source": "",
-  "summary": "",
-  "version": "",
+  "project_page": "https://github.com/7terminals/puppet-appstack",
+  "source": "https://github.com/7terminals/puppet-appstack",
+  "summary": "The appstack module sets up a directory structure for hosting isolated applications.",
+  "version": "0.0.1",
   "checksums": {
-    "Modulefile": "6b49119c8a533144c3fcd67e0aa40ff5",
-    "README.markdown": "d6760af5c9f7409f4d65d1ef76cbb8c9",
-    "README.md": "86074fbb8486e272dfe5be5fcb4d76d6",
+    "Modulefile": "2a3281d37b48875d4c2e29ede056e9ca",
+    "README.markdown": "e10e3214522f068af471fabb1822dffa",
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
-    "manifests\\init.pp": "59b826cce81022f58e3cf4eeb3491db6",
-    "manifests\\setup.pp": "4065ce996cab61069c6b2bd5522d4c44",
+    "manifests\\init.pp": "4c5607a40fbc25d7d5c57e435a31e8f0",
+    "manifests\\setup.pp": "74b26cca378db2f08aee5b329f8c0b9a",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
-    "tests\\init.pp": "72b972a24ef6aa49c7d923e4e7c205bc"
+    "tests\\init.pp": "f41cb57a50362867bf7a448453f0fa2b"
   },
   "dependencies": []
 }
